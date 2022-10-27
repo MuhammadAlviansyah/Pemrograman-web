@@ -1,41 +1,74 @@
-.header {
-    background-color: #00b7ff;
-    text-align: center;
-    padding: 1px;
-  }
-
-.footer {
-  background-color: #00b7ff;
-  text-align: center;
-  padding: 1px;
-}
-
-/* The navbar container */
-.topnav {
-    overflow: hidden;
-    background-color: #333;
+* {
+    box-sizing: border-box;
   }
   
-  /* Navbar links */
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: #2146C7;
+  }
+  
+  .header h1 {
+    font-size: 50px;
+    text-align: left;
+    color: white;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #2146C7;
+  }
+  
+  /* Style the topnav links */
   .topnav a {
     float: left;
     display: block;
-    color: #ffffff;
+    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
-  /* Links - change color on hover */
+  /* Change color on hover */
   .topnav a:hover {
     background-color: #ddd;
     color: black;
   }
-
-/* Create three equal columns that float next to each other */
-.column {
-    float: right;
-    width: 33.33%;
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
   }
   
   /* Clear floats after the columns */
@@ -45,36 +78,26 @@
     clear: both;
   }
   
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-  @media screen and (max-width: 600px) {
-    .column {
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #2146C7;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
       width: 100%;
     }
   }
-
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 20%;
-    display: inline-block;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-    padding: 2px 16px;
-}
-
-.card2 {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 70%;
-    display: inline-block;
-}
-
-.card2:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-    
